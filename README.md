@@ -1,3 +1,5 @@
+Смотри [PITCHME.md](PITCHME.md)
+
 ## Ссылочки
 
 1. [Убивай мутантов, спаси свой код / Никита Соболев](https://www.youtube.com/watch?v=FFM7arjAFmM)
