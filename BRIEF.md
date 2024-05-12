@@ -13,6 +13,7 @@
 3. Automated Unit Test Improvement using Large Language Models at Meta (https://arxiv.org/pdf/2402.09171.pdf)
 4. What It Would Take to Use Mutation Testing in Industry—A Study at Facebook (https://arxiv.org/pdf/2010.13464.pdf)
 5. Hints on Test Data Selection: Help for the Practicing Programmer (https://www.inf.pucrs.br/~zorzo/cs/demillo-mutants.pdf)
+6. Heisenbug 2019, Никита Соболев — Тестирование тестов (https://www.youtube.com/watch?v=wIOX_I69zYg)
 
 Вопрос к экзамену:
 Принципы работы мутационного тестирования. Какие недостатки тестов оно позволяет выявить?
