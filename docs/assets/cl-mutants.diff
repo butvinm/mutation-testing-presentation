@@ -1,0 +1,95 @@
+
+
+Mutant 1
+--- chip_logistics/core/articles/calcs.py
++++ chip_logistics/core/articles/calcs.py
+@@ -5,7 +5,7 @@
+
+ from chip_logistics.core.articles.models import ArticleItem
+
+-CalculationsResults = list[tuple[ArticleItem, Decimal]]
++CalculationsResults = None
+
+ # Price of one kg of article weight for air delivery
+ AIR_DELIVERY_PRICE_PER_KG = 12
+
+
+Mutant 12
+--- chip_logistics/core/articles/calcs.py
++++ chip_logistics/core/articles/calcs.py
+@@ -12,7 +12,7 @@
+ CUSTOM_FEE_RATIO = Decimal(215) / Decimal(1000)  # noqa: WPS432
+ PRICE_MARGIN_RATIO = Decimal(20) / Decimal(100)  # noqa: WPS432
+ RUSSIAN_DELIVERY_RATIO = (
+-    (100, Decimal(6)),
++    (101, Decimal(6)),
+     (50, Decimal(5)),
+     (25, Decimal(4)),
+     (5, Decimal(3)),
+
+
+Mutant 14
+--- chip_logistics/core/articles/calcs.py
++++ chip_logistics/core/articles/calcs.py
+@@ -13,7 +13,7 @@
+ PRICE_MARGIN_RATIO = Decimal(20) / Decimal(100)  # noqa: WPS432
+ RUSSIAN_DELIVERY_RATIO = (
+     (100, Decimal(6)),
+-    (50, Decimal(5)),
++    (51, Decimal(5)),
+     (25, Decimal(4)),
+     (5, Decimal(3)),
+ )
+
+
+Mutant 16
+--- chip_logistics/core/articles/calcs.py
++++ chip_logistics/core/articles/calcs.py
+@@ -14,7 +14,7 @@
+ RUSSIAN_DELIVERY_RATIO = (
+     (100, Decimal(6)),
+     (50, Decimal(5)),
+-    (25, Decimal(4)),
++    (26, Decimal(4)),
+     (5, Decimal(3)),
+ )
+
+
+
+Mutant 18
+--- chip_logistics/core/articles/calcs.py
++++ chip_logistics/core/articles/calcs.py
+@@ -15,7 +15,7 @@
+     (100, Decimal(6)),
+     (50, Decimal(5)),
+     (25, Decimal(4)),
+-    (5, Decimal(3)),
++    (6, Decimal(3)),
+ )
+
+
+
+
+Mutant 32
+--- chip_logistics/core/articles/calcs.py
++++ chip_logistics/core/articles/calcs.py
+@@ -118,7 +118,7 @@
+     invoice_and_delivery_with_custom_fee = (
+         invoice_and_delivery_for_custom + custom_fee + russia_delivery_price
+     )
+-    return invoice_and_delivery_with_custom_fee + duty_fee
++    return invoice_and_delivery_with_custom_fee - duty_fee
+
+
+ def calculate_article_price(article_item: ArticleItem) -> Decimal:
+
+
+Mutant 48
+--- chip_logistics/core/articles/calcs.py
++++ chip_logistics/core/articles/calcs.py
+@@ -169,5 +169,5 @@
+     Returns:
+         Total price.
+     """
+-    return sum((price for _, price in calculations_results), Decimal(0))
++    return sum((price for _, price in calculations_results), Decimal(1))

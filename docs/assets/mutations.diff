@@ -1,0 +1,31 @@
+- a = 1
++ a = 2
+
+- a + b
++ a - b
+
+- [1, 2, 3, 4]
++ [ ]
+
+- function foo() { return 42; }
++ function foo() { }
+
+- true
++ false
+
+- !(a == b)
++ a == b
+
+- for (var i = 0; i < 10; i++) { }
++ for (var i = 0; false; i++) { }
+
+- a < b
++ a <= b
+
+- min()
++ max()
+
+- "bar"
++ "XXbarXX"
+
+
